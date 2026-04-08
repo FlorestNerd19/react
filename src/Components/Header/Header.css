@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-radius: 50px;
+}
+
+header img {
+  position: left;
+  margin-top: 1rem;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.15));
+  width: 150px;
+  height: 125px;
+}
+
+div#logo {
+  padding-right: 30px;
+}
+
+div.continente {
+  padding-left: 2rem;
+  padding-left: 2rem;
+}

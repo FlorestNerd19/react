@@ -81,13 +81,6 @@ body {
   box-sizing: border-box;
 }
 
-.header1 {
-  display: grid;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
 h1,
 h2 {
   font-family: var(--heading);
@@ -97,8 +90,4 @@ h2 {
 
 p {
   margin: 0;
-}
-
-#Titulo {
-  size: 10px;
 }

@@ -1,6 +1,8 @@
 import { useState } from "react";
+
+import Header from "./Components/Header/Header.jsx";
 import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
+import viteLogo from "./assets/favicon.svg";
 import heroImg from "./assets/hero.png";
 import "./App.css";
 
@@ -10,16 +12,8 @@ function App() {
   return (
     <>
       <section id="center">
-        <header class="header1">
-          <div id="Titulo">WikiPaises</div>
-          <div>
-            <div>América</div>
-            <div>Africa</div>
-            <div>Asia</div>
-            <div>Europa</div>
-            <div>Oceania</div>
-          </div>
-        </header>
+        <Header />
+
         <div className="hero">
           <img src={heroImg} className="base" width="170" height="179" alt="" />
           <img src={reactLogo} className="framework" alt="React logo" />
