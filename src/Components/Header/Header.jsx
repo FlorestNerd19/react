@@ -3,10 +3,10 @@ import logo from "/Icon.png";
 function Header() {
   return (
     <header>
-      <div>
+      <div class="header">
         <img src={logo} alt="WikiPaises Logo" />
         <a id="logo">WikiPaises</a>{" "}
-        <div class="continente">
+        <div class="header-right">
           <a>América</a>
           <a>Africa</a>
           <a>Asia</a>
