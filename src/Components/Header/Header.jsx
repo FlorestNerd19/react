@@ -5,13 +5,15 @@ function Header() {
     <header>
       <div>
         <img src={logo} alt="WikiPaises Logo" />
+        <a id="logo">WikiPaises</a>{" "}
+        <div class="continente">
+          <a>América</a>
+          <a>Africa</a>
+          <a>Asia</a>
+          <a>Europa</a>
+          <a>Oceania</a>
+        </div>
       </div>
-      <div id="logo">WikiPaises</div>
-      <div class="continente">América</div>
-      <div class="continente">Africa</div>
-      <div class="continente">Asia</div>
-      <div class="continente">Europa</div>
-      <div class="continente">Oceania</div>
     </header>
   );
 }
