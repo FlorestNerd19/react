@@ -1,6 +1,15 @@
 import "./paisCard.css";
 
 function paisCard({ pais }) {
+  const Populacao = new Intl.NumberFormat("pt-BR").format(country.population);
+
+  const corContinente = {
+    Africa: "#e921e9",
+    Americas: "#48cc2ebb",
+    Asia: "#f1a20f",
+    Europa: "#eb1a1a",
+    Oceania: "#2874e6",
+  };
   return (
     <>
       <div className="pais-card">
