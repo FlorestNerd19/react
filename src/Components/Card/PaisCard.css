@@ -1,0 +1,121 @@
+.pais-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #525252;
+}
+
+.pais-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.pais-card-header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.pais-id {
+  font-weight: bold;
+  color: #777;
+  font-size: 0.9rem;
+  background: #f0f0f0;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.pais-image {
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1));
+  margin-bottom: 15px;
+}
+
+.pais-name {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #333;
+  margin: 10px 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pais-types-container {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.type-badge {
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Cores específicas por tipo (estilo PokeAPI) */
+.type-badge.grass {
+  background-color: #78c850;
+}
+.type-badge.fire {
+  background-color: #f08030;
+}
+.type-badge.water {
+  background-color: #6890f0;
+}
+.type-badge.bug {
+  background-color: #a8b820;
+}
+.type-badge.normal {
+  background-color: #a8a878;
+}
+.type-badge.poison {
+  background-color: #a040a0;
+}
+.type-badge.electric {
+  background-color: #f8d030;
+  color: #333;
+}
+.type-badge.ground {
+  background-color: #e0c068;
+}
+.type-badge.fairy {
+  background-color: #ee99ac;
+}
+.type-badge.fighting {
+  background-color: #c03028;
+}
+.type-badge.psychic {
+  background-color: #f85888;
+}
+.type-badge.rock {
+  background-color: #b8a038;
+}
+.type-badge.ghost {
+  background-color: #705898;
+}
+.type-badge.ice {
+  background-color: #98d8d8;
+  color: #333;
+}
+.type-badge.dragon {
+  background-color: #7038f8;
+}

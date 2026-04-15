@@ -13,7 +13,7 @@ const paisService = {
     const response = await paisesApi.get(`alpha/${code}`);
     return response.data;
   },
-  listPaiss: async (limit = 20, offset) => {
+  listPais: async (limit = 20, offset) => {
     const response = await paisesApi.get(
       `Pais?limit=${limit}&offset=${offset}`,
     );

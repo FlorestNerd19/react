@@ -4,8 +4,12 @@ function Header() {
   return (
     <header>
       <div class="header">
-        <img src={logo} alt="WikiPaises Logo" />
-        <a id="logo">WikiPaises</a>{" "}
+        <div className="logo-container">
+          <img src={logo} alt="WikiPaises Logo" />
+          <a id="logo" href="/">
+            WikiPaises
+          </a>
+        </div>
         <div class="header-right">
           <a>América</a>
           <a>Africa</a>

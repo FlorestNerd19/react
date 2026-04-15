@@ -2,9 +2,10 @@ import { useState } from "react";
 
 import Header from "./Components/Header/Header.jsx";
 import "./App.css";
+import paisService from "./paises.services.js";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [count, setPais] = useState(0);
 
   return (
     <>
@@ -19,7 +20,7 @@ function App() {
         </div>
         <button
           className="counter"
-          onClick={() => setCount((count) => count + 1)}
+          onClick={() => setPais((count) => count + 1)}
         >
           Count is {count}
         </button>
