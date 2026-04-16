@@ -4,17 +4,26 @@ function PaisCard({ pais }) {
   const Populacao = new Intl.NumberFormat("pt-BR").format(pais.population);
 
   const corContinente = {
-    Africa: "#e921e9",
-    Americas: "#48cc2ebb",
-    Asia: "#f1a20f",
-    Europa: "#eb1a1a",
-    Oceania: "#2874e6",
+    Africa: "#e97b21",
+    Americas: "rgb(34, 151, 11)",
+    Asia: "#edf10f",
+    Europe: "#0fa0e4",
+    Oceania: "#f54040",
   };
 
   return (
     <>
       <div className="pais-card">
+        <div className="pais-flag">
+          <img
+            src={pais.flags?.svg || pais.flags?.png}
+            alt={pais.name?.common}
+            className="pais-image"
+          />
+        </div>
         <div className="pais-card-header">
+          <p className="pais-name">{pais.name?.common}</p>
+
           <span
             className="pais-id"
             style={{ backgroundColor: corContinente[pais.region] || "#aaa" }}
@@ -22,12 +31,14 @@ function PaisCard({ pais }) {
             {pais.region}
           </span>
         </div>
-        <img
-          src={pais.flags?.svg || pais.flags?.png}
-          alt={pais.name?.common}
-          className="pais-image"
-        />
-        <h3 className="pais-name">{pais.name?.common}</h3>
+        <div>
+          <img src="public/gps.png" className="pais-icons" />
+          {pais.capital}
+        </div>
+        <div>
+          <img src="public/populacao.png" className="pais-icons" />
+          {Populacao}
+        </div>
       </div>
     </>
   );
