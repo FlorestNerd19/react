@@ -1,7 +1,7 @@
-import "./paisCard.css";
+import "./PaisCard.css";
 
-function paisCard({ pais }) {
-  const Populacao = new Intl.NumberFormat("pt-BR").format(country.population);
+function PaisCard({ pais }) {
+  const Populacao = new Intl.NumberFormat("pt-BR").format(pais.population);
 
   const corContinente = {
     Africa: "#e921e9",
@@ -10,28 +10,27 @@ function paisCard({ pais }) {
     Europa: "#eb1a1a",
     Oceania: "#2874e6",
   };
+
   return (
     <>
       <div className="pais-card">
-        <div className="pais-card-card-header">
-          <span className="pais-id">#{pais.id}</span>
+        <div className="pais-card-header">
+          <span
+            className="pais-id"
+            style={{ backgroundColor: corContinente[pais.region] || "#aaa" }}
+          >
+            {pais.region}
+          </span>
         </div>
         <img
-          src={pais.sprites.other["official-artwork"].front_default}
-          alt={pais.name}
+          src={pais.flags?.svg || pais.flags?.png}
+          alt={pais.name?.common}
           className="pais-image"
         />
-        <h3 className="pais-name">{pais.name}</h3>
-        <div className="pais-types-container">
-          {pais.types.map((t) => (
-            <span key={t.type.name} className={`type-badge ${t.type.name}`}>
-              {t.type.name}{" "}
-            </span>
-          ))}
-        </div>
+        <h3 className="pais-name">{pais.name?.common}</h3>
       </div>
     </>
   );
 }
 
-export default paisCard;
+export default PaisCard;

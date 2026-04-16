@@ -1,24 +1,30 @@
-import paisesApi from "./paises.api";
+import PaisesApi from "./paises.api.js";
 
-const paisService = {
+const PaisService = {
+  getPaises: async () => {
+    const response = await PaisesApi.get(
+      `all?fields=name,flags,capital,region,languages,population`,
+    );
+    return response.data;
+  },
   getPaisByRegion: async (region) => {
-    const response = await paisesApi.get(`region/${region}`);
+    const response = await PaisesApi.get(`region/${region}`);
     return response.data;
   },
   getPaisByName: async (name) => {
-    const response = await paisesApi.get(`name/${name}`);
+    const response = await PaisesApi.get(`name/${name}`);
     return response.data;
   },
   getPaisCode: async (code) => {
-    const response = await paisesApi.get(`alpha/${code}`);
+    const response = await PaisesApi.get(`alpha/${code}`);
     return response.data;
   },
   listPais: async (limit = 20, offset) => {
-    const response = await paisesApi.get(
+    const response = await PaisesApi.get(
       `Pais?limit=${limit}&offset=${offset}`,
     );
     return response.data;
   },
 };
 
-export default paisService;
+export default PaisService;

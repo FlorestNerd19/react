@@ -1,11 +1,12 @@
-import paisCard from "../Card/PaisCard";
-import "./PokemonList.css";
+import PaisCard from "../Card/PaisCard.jsx";
+import "./PaisList.css";
+
 function PaisList({ paisList }) {
   return (
     <>
       <div className="pais-grid">
         {paisList.map((p) => (
-          <paisCard key={p.id} pais={p} />
+          <PaisCard key={p.cca3} pais={p} />
         ))}
       </div>
     </>
