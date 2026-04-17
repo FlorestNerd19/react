@@ -1,0 +1,13 @@
+.footer {
+  width: 100%;
+  display: inline-block;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  overflow: hidden;
+  background-color: navy;
+}
+
+.criador {
+}

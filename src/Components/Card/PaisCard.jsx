@@ -1,4 +1,5 @@
 import "./PaisCard.css";
+import { useNavigate } from "react-router-dom";
 
 function PaisCard({ pais }) {
   const Populacao = new Intl.NumberFormat("pt-BR").format(pais.population);
@@ -32,11 +33,11 @@ function PaisCard({ pais }) {
           </span>
         </div>
         <div>
-          <img src="public/gps.png" className="pais-icons" />
+          <img src="gps.png" className="pais-icons" />
           {pais.capital}
         </div>
         <div>
-          <img src="public/populacao.png" className="pais-icons" />
+          <img src="populacao.png" className="pais-icons" />
           {Populacao}
         </div>
       </div>
