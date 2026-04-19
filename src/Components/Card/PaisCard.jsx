@@ -2,6 +2,7 @@ import "./PaisCard.css";
 import { useNavigate } from "react-router-dom";
 
 function PaisCard({ pais }) {
+  const navigate = useNavigate();
   const Populacao = new Intl.NumberFormat("pt-BR").format(pais.population);
 
   const corContinente = {
@@ -14,7 +15,10 @@ function PaisCard({ pais }) {
 
   return (
     <>
-      <div className="pais-card">
+      <div
+        className="pais-card"
+        onClick={() => navigate(`/country/${pais.cca3}`)}
+      >
         <div className="pais-flag">
           <img
             src={pais.flags?.svg || pais.flags?.png}

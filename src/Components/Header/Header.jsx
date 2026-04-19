@@ -11,7 +11,7 @@ function Header() {
           </a>
         </div>
         <div className="header-right">
-          <a>América</a>
+          <a href="/region/americas">América</a>
           <a>Africa</a>
           <a>Asia</a>
           <a>Europa</a>
