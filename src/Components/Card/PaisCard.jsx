@@ -7,7 +7,7 @@ function PaisCard({ pais }) {
 
   const corContinente = {
     Africa: "#e97b21",
-    Americas: "rgb(34, 151, 11)",
+    Americas: "#22970b",
     Asia: "#edf10f",
     Europe: "#0fa0e4",
     Oceania: "#f54040",
