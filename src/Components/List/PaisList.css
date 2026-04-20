@@ -1,9 +1,72 @@
+/* Container da busca */
+input[type="text"] {
+  display: block;
+  width: 100%;
+  max-width: 500px;
+  margin: 40px auto 10px auto; /* Centraliza o input */
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid #e5e4e7;
+  border-radius: 25px; /* Bordas arredondadas modernas */
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+input[type="text"]:focus {
+  border-color: dodgerblue;
+  box-shadow: 0 4px 12px rgba(30, 144, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Texto de ajuda abaixo do input */
+.search-count {
+  text-align: center;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+}
+
+/* Grid de Países */
 .pais-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  justify-content: center;
-  gap: 25px;
-  padding: 40px 20px;
+  /* auto-fit preenche o espaço melhor que auto-fill em telas grandes */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  /* Animação suave ao carregar a lista */
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Mensagem de "Nenhum país encontrado" */
+.no-results {
+  text-align: center;
+  padding: 50px;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .pais-grid {
+    grid-template-columns: 1fr; /* Coluna única no celular */
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    width: 90%;
+  }
 }

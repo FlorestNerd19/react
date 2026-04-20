@@ -22,12 +22,12 @@ function PaisCard({ pais }) {
         <div className="pais-flag">
           <img
             src={pais.flags?.svg || pais.flags?.png}
-            alt={pais.name?.common}
+            alt={pais.translations?.por?.common}
             className="pais-image"
           />
         </div>
         <div className="pais-card-header">
-          <p className="pais-name">{pais.name?.common}</p>
+          <p className="pais-name">{pais.translations?.por?.common}</p>
 
           <span
             className="pais-id"

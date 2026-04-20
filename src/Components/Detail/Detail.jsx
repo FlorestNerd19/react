@@ -30,14 +30,14 @@ function Detail() {
         <div className="detail-flag">
           <img
             src={pais.flags?.svg || pais.flags?.png}
-            alt={pais.name?.common}
+            alt={pais.translations?.por?.common}
             className="pais-image"
           />
         </div>
         <h2>{pais.translations?.por?.official}</h2>
         <h4>{pais.translations?.por?.common}</h4>
       </div>
-      <div className="details-grid">
+      <div>
         <div className="pais-detail">
           <div>
             <p>Capital:</p>

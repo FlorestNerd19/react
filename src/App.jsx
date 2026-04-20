@@ -9,18 +9,23 @@ import Detail from "./Components/Detail/Detail.jsx";
 
 function App() {
   const [paisList, setPaisList] = useState([]);
+  const [region, setRegion] = useState("");
 
   useEffect(() => {
     PaisService.getPaises().then((data) => {
-      setPaisList(data);
+      setPaisList(Array.isArray(data) ? data : []);
     });
   }, []);
 
+  const filtered = region
+    ? paisList.filter((c) => c.region === region)
+    : paisList;
+
   return (
     <>
-      <Header />
+      <Header onRegionChange={setRegion} region={region} />
       <Routes>
-        <Route path="/" element={<PaisList paisList={paisList} />} />
+        <Route path="/" element={<PaisList paisList={filtered} />} />
         <Route path="/country/:code" element={<Detail />} />
       </Routes>
       <Footer />

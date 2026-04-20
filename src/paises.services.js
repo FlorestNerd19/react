@@ -3,7 +3,7 @@ import PaisesApi from "./paises.api.js";
 const PaisService = {
   getPaises: async (limit = 20, offset) => {
     const response = await PaisesApi.get(
-      `all?fields=cca3,name,flags,capital,region,languages,population`,
+      `/all?fields=cca3,name,flags,capital,region,languages,population,translations`,
     );
     return response.data;
   },
