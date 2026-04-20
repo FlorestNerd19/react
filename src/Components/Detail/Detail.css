@@ -49,11 +49,18 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+
   background-color: #f9f9f9;
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.pais-icons {
+  width: 24px; /* Tamanho fixo para os ícones não "explodirem" */
+  height: 24px;
+  object-fit: contain;
 }
 
 .pais-detail div {

@@ -40,36 +40,44 @@ function Detail() {
       <div>
         <div className="pais-detail">
           <div>
+            <img src="/capital.png" className="pais-icons" />
             <p>Capital:</p>
             {pais.capital}
           </div>
           <div>
+            <img src="/continente.png" className="pais-icons" />
             <p>Continente:</p>
             {pais.continents?.[0]}
           </div>
           <div>
+            <img src="/regiao.png" className="pais-icons" />
             <p>Subregião:</p>
             {pais.subregion}
           </div>
           <div>
+            <img src="/area.png" className="pais-icons" />
             <p>Área:</p>
             {pais.area} km²
           </div>
         </div>
         <div className="pais-detail">
           <div>
+            <img src="/populacao.png" className="pais-icons" />
             <p>População:</p>
             {Intl.NumberFormat("pt-BR").format(pais.population)}
           </div>
           <div>
+            <img src="/idioma.png" className="pais-icons" />
             <p>Linguagens:</p>
             {languages}
           </div>
           <div>
+            <img src="/moeda.png" className="pais-icons" />
             <p>Moeda:</p>
             {currency?.name}({currency?.symbol})
           </div>
           <div>
+            <img src="/codigo.png" className="pais-icons" />
             <p>Código:</p>
             {code}
           </div>
